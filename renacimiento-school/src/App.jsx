@@ -21,6 +21,7 @@ import foto12 from './assets/Galeria/Defensa de test.jpg'
 import foto13 from './assets/Galeria/Celebracion.jpg'
 import foto14 from './assets/Galeria/15 De septiembre.jpg'
 import foto15 from './assets/Galeria/15 De septiembre3.jpg'
+import CountdownTimer from './componentes/Countdow'
 
 function App() {
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft())
@@ -83,28 +84,10 @@ function App() {
   </div>
   
   <h2 className="subtitle">MATRÍCULA EN LÍNEA</h2>
-  
-  <div className="countdown-container">
-    <h3 className="countdown-title">Tiempo restante para matrícula:</h3>
-    <div className="countdown">
-      <div className="countdown-item">
-        <span className="countdown-number">{timeLeft.days}</span>
-        <span className="countdown-label">Días</span>
-      </div>
-      <div className="countdown-item">
-        <span className="countdown-number">{timeLeft.hours}</span>
-        <span className="countdown-label">Horas</span>
-      </div>
-      <div className="countdown-item">
-        <span className="countdown-number">{timeLeft.minutes}</span>
-        <span className="countdown-label">Minutos</span>
-      </div>
-      <div className="countdown-item">
-        <span className="countdown-number">{timeLeft.seconds}</span>
-        <span className="countdown-label">Segundos</span>
-      </div>
-    </div>
+  <div>
+    <CountdownTimer/>
   </div>
+ 
 </header>
 
       {/* Sección de Matrícula - MOVIDA ARRIBA de la información */}
