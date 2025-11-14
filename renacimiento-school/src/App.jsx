@@ -77,7 +77,6 @@ function App() {
 
   return (
     <>
-    <div className="container">
       <Navbar />
       <Banner />
       <Countdown/>
@@ -85,7 +84,6 @@ function App() {
       <Carrousel />
       <Contact />
       <Footer />
-    </div>
     </>
   )
 }

@@ -1,36 +1,53 @@
-// import "bootstrap/dist/css/bootstrap.min.css";
+import "./Navbar.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../assets/Logo/RenacimientoLogo.png";
 
-const Navbar = () => {
+const Navbar = ({ closeNavbar }) => {
   return (
-    <nav className="navbar navbar-expand-lg fixed-top navbar-custom">
-  <div className="container-fluid">
-    <button
-      className="navbar-toggler"
-      type="button"
-      data-bs-toggle="collapse"
-      data-bs-target="#navbarNavAltMarkup"
-      aria-controls="navbarNavAltMarkup"
-      aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
-      <span className="navbar-toggler-icon" />
-    </button>
-    <div className="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
-      <div className="navbar-nav">
-        <a className="nav-link active text-white " aria-current="page" href="#">
-          Inicio
+    <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top custom-border">
+      <div className="container-fluid">
+        <a href="#inicio" className="navbar-brand d-flex align-items-center">
+          {/* <img src={logo} className="cstm-logo" alt="Fumiga logo" /> */}
         </a>
-        <a className="nav-link text-white " href="#">
-          Contáctanos
-        </a>
-        <a className="nav-link text-white " href="#">
-          Sobre Nosotros
-        </a>
-      </div>
-    </div>
-  </div>
-</nav>
 
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarS"
+          aria-controls="navbarS"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse justify-content-end" id="navbarS">
+          <ul className="navbar-nav">
+            <li className="nav-item mx-3">
+              <a href="#Banner" className="nav-link text-white" onClick={closeNavbar}>
+                Inicio
+              </a>
+            </li>
+            <li className="nav-item mx-3">
+              <a href="#Countdown" className="nav-link text-white" onClick={closeNavbar}>
+                Matriculate
+              </a>
+            </li>
+            <li className="nav-item mx-3">
+              <a href="#Edubox" className="nav-link text-white" onClick={closeNavbar}>
+                Edubox
+              </a>
+            </li>
+            <li className="nav-item mx-3">
+              <a href="#Contact" className="nav-link text-white" onClick={closeNavbar}>
+                Contáctanos
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
   );
 };
 

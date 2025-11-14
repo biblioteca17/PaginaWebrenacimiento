@@ -2,7 +2,7 @@ const Contact = () => {
   return (
     <div>
       {/* Información de Contacto */}
-      <section className="info-section">
+      <section className="info-section" id="Contact">
         <div className="info-item">
           <h3 className="info-title">Ubicación</h3>
           <a

@@ -1,0 +1,144 @@
+::root {
+  --azul-principal-renacimiento: #121780;
+  --amarillo-principal-renacimiento: #FFC41D;
+  --navbar-border-color: transparent;
+  --navbar-shadow-color: #808080;
+  ---: #E5BF00;
+  --link-underline-color: #FFC41D;
+}
+
+/* ===============================
+   NAVBAR PRINCIPAL
+   =============================== */
+.navbar-custom {
+  background-color: #121780;          /* Fondo de la navbar */
+  border-bottom: 0.125rem solid transparent; /* Línea inferior sutil */
+  box-shadow: 0 0.125rem 0.25rem #808080;   /* Sombra debajo */
+  display: flex;                       /* Flex para centrar contenido horizontal */
+  align-items: center;                 /* Centrado vertical */
+  height: 5rem;                        /* Altura desktop (≈80px) */
+  padding: 0 1rem;                     /* Espacio horizontal */
+}
+
+/* ===============================
+   LOGO
+   =============================== */
+.cstm-logo {
+  height: 2.5rem;      /* Desktop: 50px */
+  margin-right: 0.625rem; /* Espacio entre logo y texto */
+}
+
+/* ===============================
+   LISTA DE LINKS
+   =============================== */
+nav ul {
+  list-style: none;   /* Quitar viñetas */
+  margin: 0;
+  padding: 0;
+  display: flex;      /* Alinear los links horizontalmente */
+  align-items: center;
+}
+
+/* Cada item de la lista */
+nav li {
+  margin-right: 1.875rem; /* 30px entre links */
+  position: relative;      /* Para posicionar pseudo-elementos si es necesario */
+}
+
+/* ===============================
+   LINKS
+   =============================== */
+.nav-link {
+  position: relative;      /* Pseudo-elemento ::after relativo al link */
+  display: inline-block;   /* Evita que la línea se expanda fuera del link */
+  text-decoration: none;   /* Quitar subrayado */
+  color: #E5BF00;          /* Color del link */
+  font-size: 1.375rem;     /* Desktop: 22px */
+  padding: 1rem 0;         /* Espacio vertical alrededor del texto */
+  transition: color 0.3s ease;
+}
+
+/* Hover sobre el link */
+.nav-link:hover {
+  color: #FFC41D;          /* Color al pasar el mouse */
+}
+
+/* Línea animada debajo del link */
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;                /* Inicialmente invisible */
+  height: 0.25rem;         /* 4px grosor de la línea */
+  background-color: #FFC41D;
+  transition: width 0.3s ease;
+}
+
+/* Cuando se hace hover o el link está activo */
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;             /* Se expande solo bajo el link */
+}
+
+/* ===============================
+   MEDIA QUERIES
+   =============================== */
+
+/* Móvil */
+@media (max-width: 768px) {
+  .navbar-custom {
+    height: 3.75rem;   /* 60px */
+    padding: 0 0.75rem;
+  }
+
+  .cstm-logo {
+    height: 1.875rem;  /* 30px */
+  }
+
+  nav li {
+    margin-right: 1rem; /* Reducir espacio horizontal */
+  }
+
+  .nav-link {
+    font-size: 1.125rem; /* 18px */
+    padding: 0.75rem 0;  /* Espacio vertical menor */
+  }
+
+  nav ul {
+    flex-direction: column; /* Menú vertical en móvil si quieres */
+    align-items: flex-start;
+  }
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .navbar-custom {
+    height: 4.375rem;    /* 70px */
+  }
+
+  .cstm-logo {
+    height: 2.25rem;     /* 45px */
+  }
+
+  .nav-link {
+    font-size: 1.25rem;  /* 20px */
+    padding: 0.875rem 0; /* 14px vertical */
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .navbar-custom {
+    height: 5rem;       /* 80px */
+  }
+
+  .cstm-logo {
+    height: 2.5rem;     /* 50px */
+  }
+
+  .nav-link {
+    font-size: 1.375rem; /* 22px */
+    padding: 1rem 0;     /* 16px vertical */
+  }
+}

@@ -1,6 +1,6 @@
 const Edubox = () => {
   return (
-    <div>
+    <div id="Edubox">
       {/* Sección de Matrícula - MOVIDA ARRIBA de la información */}
       <section className="matricula-section">
         <h2 className="matricula-title">MATRÍCULA EN LÍNEA</h2>

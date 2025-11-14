@@ -3,7 +3,7 @@ import schoolImage from '../assets/Escuela/42.png';
 
 const Banner = () => {
 return(
-    <div className="container">
+    <div className="container mt-5" id="Banner" >
         {/* Logo arriba del título */}
           <div className="logo-top">
             <img src={logo} alt="Logo Renacimiento School" />

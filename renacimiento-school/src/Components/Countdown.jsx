@@ -29,7 +29,7 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="countdown-container">
+    <div className="countdown-container" id="Countdown" >
       <h2 className="subtitle">MATRÍCULA EN LÍNEA</h2>
       <h3 className="countdown-title">Tiempo restante para matrícula:</h3>
       <div className="countdown">

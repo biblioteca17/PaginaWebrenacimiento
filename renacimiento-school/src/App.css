@@ -16,13 +16,12 @@ body {
 }
 
 .container {
-  max-width: 2000px;
+  max-width: auto;
   width: 100%;
   margin: 0 auto;
   padding: 40px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   text-align: center;
 }
 
@@ -256,7 +255,7 @@ body {
 
 .edubox {
   display: inline-block;
-  background: #e74c3c;
+  background: #121780;
   color: white;
   padding: 18px 45px;
   border-radius: 10px;
@@ -270,9 +269,10 @@ body {
 }
 
 .edubox:hover {
+  color: white;
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(231, 76, 60, 0.6);
-  background: #c0392b;
+  background: #121780;
 }
 
 /* Slideshow Styles */
@@ -357,7 +357,8 @@ body {
 .footer {
   text-align: center;
   padding: 30px;
-  color: #7f8c8d;
+  background-color: #121780;
+  color: #ffffff;
   font-size: 1rem;
   margin-top: 50px;
   width: 100%;
