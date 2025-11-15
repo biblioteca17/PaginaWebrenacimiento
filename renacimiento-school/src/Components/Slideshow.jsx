@@ -16,7 +16,7 @@ import foto13 from '../assets/Galeria/Celebracion.jpg'
 import foto14 from '../assets/Galeria/15 De septiembre.jpg'
 import foto15 from '../assets/Galeria/15 De septiembre3.jpg'
 
-const Carrousel = () => {
+const Slideshow = () => {
   // Array con las imágenes importadas
   const slides = [
     foto1,
@@ -74,4 +74,4 @@ const Carrousel = () => {
   );
 };
 
-export default Carrousel;
+export default Slideshow;

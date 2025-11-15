@@ -29,23 +29,27 @@ const Countdown = () => {
   }, []);
 
   return (
-    <div className="countdown-container" id="Countdown" >
-      <h2 className="subtitle">MATRÍCULA EN LÍNEA</h2>
-      <h3 className="countdown-title">Tiempo restante para matrícula:</h3>
-      <div className="countdown">
-        <div className="countdown-item">
+    <div className="countdown-section" id="Countdown">
+      <h2 className="countdown-subtitle">MATRÍCULA EN LÍNEA</h2>
+      <h3 className="countdown-heading">Tiempo restante para matrícula</h3>
+
+      <div className="countdown-wrapper">
+        <div className="countdown-box">
           <span className="countdown-number">{timeLeft.days}</span>
           <span className="countdown-label">Días</span>
         </div>
-        <div className="countdown-item">
+
+        <div className="countdown-box">
           <span className="countdown-number">{timeLeft.hours}</span>
           <span className="countdown-label">Horas</span>
         </div>
-        <div className="countdown-item">
+
+        <div className="countdown-box">
           <span className="countdown-number">{timeLeft.minutes}</span>
           <span className="countdown-label">Minutos</span>
         </div>
-        <div className="countdown-item">
+
+        <div className="countdown-box">
           <span className="countdown-number">{timeLeft.seconds}</span>
           <span className="countdown-label">Segundos</span>
         </div>

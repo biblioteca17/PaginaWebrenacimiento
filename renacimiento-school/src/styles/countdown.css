@@ -1,0 +1,84 @@
+/* ===== COUNTDOWN SECTION ===== */
+.countdown-section {
+  width: 97%;
+  max-width: auto;
+  margin: 1vh auto;                /* separación arriba/abajo */
+  padding: 3rem 2rem;                /* separación interna */
+  background: #ffffff;
+  border-radius: 2rem;
+  border: 0.2rem solid #e9ecef;
+  box-shadow: 0 0.5rem 2rem rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+/* SUBTÍTULO PRINCIPAL */
+.countdown-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.8rem);
+  font-weight: 700;
+  color: #121780;
+  letter-spacing: 0.05em;
+  margin-bottom: 1rem;
+}
+
+/* TÍTULO DEL CONTADOR */
+.countdown-heading {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-weight: 600;
+  color: #121780;
+  margin-bottom: 3vh;
+}
+
+/* CONTENEDOR DE ITEMS */
+.countdown-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+/* CAJA INDIVIDUAL */
+.countdown-box {
+  background: #121780;
+  padding: 2vh 2vw;
+  min-width: 8rem;
+  border-radius: 1.4rem;
+  border: 0.2rem solid #121780;
+  text-align: center;
+  box-shadow: 0 0.4rem 1.6rem rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+/* HOVER SUAVE */
+.countdown-box:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 0.6rem 2rem rgba(52,152,219,0.4);
+}
+
+/* NÚMERO GRANDE */
+.countdown-number {
+  display: block;
+  font-size: clamp(1.6rem, 4vw, 3rem);
+  font-weight: 800;
+  margin-bottom: 0.4rem;
+  color: #ffffff;
+}
+
+/* TEXTO DEBAJO */
+.countdown-label {
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* ===== OPCIONAL: EFECTO PARA CELULARES ===== */
+
+@media (max-width: 40rem) {
+  .countdown-section {
+    padding: 3vh 4vw;
+    border-radius: 1rem;
+  }
+
+  .countdown-box {
+    min-width: 6rem;
+  }
+}

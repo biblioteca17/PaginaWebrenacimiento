@@ -11,9 +11,9 @@
    NAVBAR PRINCIPAL
    =============================== */
 .navbar-custom {
-  background-color: #121780;          /* Fondo de la navbar */
+  background-color: #121780;        /* Fondo de la navbar */
   border-bottom: 0.125rem solid transparent; /* Línea inferior sutil */
-  box-shadow: 0 0.125rem 0.25rem #808080;   /* Sombra debajo */
+  /*box-shadow: 0 0.125rem 0.25rem #808080; Sombra debajo */
   display: flex;                       /* Flex para centrar contenido horizontal */
   align-items: center;                 /* Centrado vertical */
   height: 5rem;                        /* Altura desktop (≈80px) */
@@ -41,6 +41,7 @@ nav ul {
 
 /* Cada item de la lista */
 nav li {
+  color: teal;
   margin-right: 1.875rem; /* 30px entre links */
   position: relative;      /* Para posicionar pseudo-elementos si es necesario */
 }

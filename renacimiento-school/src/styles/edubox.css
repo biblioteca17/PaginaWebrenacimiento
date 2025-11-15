@@ -1,0 +1,76 @@
+/* ===== EDUBOX SECTION ===== */
+.edubox-section {
+  width: 97%;
+  max-width: 97%;
+  margin: 4vh auto;           /* separación vertical + centrado horizontal */
+  padding: 4vh 3vw;           /* separación interna responsiva */
+  background: #FFD700;        /* amarillo original */
+  border-radius: 2rem;
+  box-shadow: 0 1vh 3vh rgba(255,215,0,0.3);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TÍTULO PRINCIPAL */
+.edubox-title {
+  font-size: clamp(1.8rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: #121780;
+  margin-bottom: 1.5vh;
+  letter-spacing: 0.05em;
+}
+
+/* SUBTÍTULO */
+.edubox-subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  font-style: italic;
+  color: #121780;
+  margin-bottom: 3vh;
+}
+
+/* BOTÓN EDUBOX */
+.edubox-btn {
+  display: inline-block;
+  background: #121780;
+  color: #ffffff;
+  padding: 1.5vh 4vw;
+  border-radius: 1rem;
+  font-weight: 700;
+  font-size: clamp(1.2rem, 3vw, 1.6rem);
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  box-shadow: 0 0.6vh 2vh rgba(231,76,60,0.4);
+  transition: all 0.3s ease;
+}
+
+.edubox-btn:hover {
+  transform: translateY(-0.4rem);
+  box-shadow: 0 1vh 2.5vh rgba(231,76,60,0.6);
+  color: #ffffff;
+  background: #121780;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .edubox-section {
+    padding: 3vh 5vw;
+    border-radius: 1.5rem;
+  }
+
+  .edubox-title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .edubox-subtitle {
+    font-size: clamp(0.9rem, 3vw, 1.2rem);
+  }
+
+  .edubox-btn {
+    padding: 1.2vh 3vw;
+    font-size: clamp(1rem, 3vw, 1.3rem);
+  }
+}
