@@ -22,9 +22,9 @@
 /* Contenedor de Slides */
 .slideshow-container {
   position: relative;
-  width: 70%;
+  width: 100%;
   max-width: auto; /* ligeramente separado de los bordes */
-  height: 40vh; /* altura proporcional al viewport */
+  height: 60vh; /* altura proporcional al viewport */
   border-radius: 1rem;
   overflow: hidden;
   display: flex;
@@ -58,15 +58,15 @@
 .slideshow-dots {
   display: flex;
   justify-content: center;
-  gap: 1rem;
-  margin-top: 1.5rem;
+  gap: 12px;
+  margin-top: 15px;
   width: 100%;
   max-width: 30rem;
 }
 
 .dot {
-  width: 1rem;
-  height: 1rem;
+  width: 14px;
+  height: 14px;
   border-radius: 50%;
   border: none;
   background-color: #bdc3c7;
@@ -86,7 +86,9 @@
 /* Responsive */
 @media (max-width: 768px) {
   .slideshow-container {
-    height: 30vh;
+    height: 70vh;
+    max-height: 600px;
+
   }
   
   .slideshow-title {
@@ -96,7 +98,8 @@
 
 @media (max-width: 480px) {
   .slideshow-container {
-    height: 25vh;
+    height: 50vh;
+
   }
 
   .slideshow-title {

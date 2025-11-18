@@ -1,17 +1,17 @@
 /* ===== CONTACT SECTION ===== */
 .contact-section {
-  width: 70%;
-  max-width: 70%;
-  margin: 4vh auto;              /* separación arriba/abajo + centrado horizontal */
-  padding: 4vh 3vw;              /* espacio interno responsivo */
+  width: 100%;                    /* CAMBIADO: de 70% a 90% */
+  max-width: 80%;             /* CAMBIADO: de 70% a 1200px */
+  margin: 50px auto;             /* CAMBIADO: de 4vh auto a 40px auto */
+  padding: 30px 25px;            /* CAMBIADO: de 4vh 3vw a 30px 25px */
   display: flex;
   justify-content: center;
 }
 
 .contact-wrapper {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 2rem;                     /* separación entre los boxes */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* CAMBIADO: de 18rem a 300px */
+  gap: 25px;                     /* CAMBIADO: de 2rem a 25px */
   justify-items: center;
   width: 100%;
 }
@@ -19,105 +19,40 @@
 /* ===== CONTACT BOX ===== */
 .contact-box {
   background: #ffffff;
-  padding: 2.5vh 2vw;
-  border-radius: 1.5rem;
-  box-shadow: 0 1vh 3vh rgba(0,0,0,0.1);
-  border: 0.1rem solid #e9ecef;
+  padding: 30px 25px;            /* CAMBIADO: de 2.5vh 2vw a 30px 25px */
+  border-radius: 16px;           /* CAMBIADO: de 1.5rem a 16px */
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1); /* CAMBIADO: de 1vh 3vh a 8px 25px */
+  border: 1px solid #e9ecef;     /* CAMBIADO: de 0.1rem a 1px */
   text-align: center;
   transition: all 0.3s ease;
   width: 100%;
-  max-width: 20rem;
-}
-
-.contact-box:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1.5vh 4vh rgba(0,0,0,0.15);
-  border-color: #3498db;
-}
-
-/* ===== TEXTOS ===== */
-.contact-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  color: #2c3e50;
-  font-weight: 600;
-  margin-bottom: 1vh;
-}
-
-.contact-content {
-  font-size: clamp(1rem, 2vw, 1.3rem);
-  font-weight: 500;
-  color: #34495e;
-  margin-bottom: 0.5vh;
-}
-
-.contact-link {
-  text-decoration: none;
-  color: inherit;
-  display: block;
-  transition: all 0.3s ease;
-}
-
-.contact-link:hover .contact-content {
-  color: #3498db;
-}
-
-.contact-subtext {
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
-  color: #7f8c8d;
-  font-style: italic;
-  margin-top: 0.5vh;
-}
-
-/* ===== CONTACT SECTION ===== */
-.contact-section {
-  width: 70%;
-  max-width: 70%;
-  margin: 4vh auto;              /* separación arriba/abajo + centrado horizontal */
-  padding: 4vh 3vw;              /* espacio interno responsivo */
+  max-width: 350px;              /* CAMBIADO: de 20rem a 350px */
+  min-height: 200px;             /* NUEVO: altura mínima consistente */
   display: flex;
-  justify-content: center;
-}
-
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  gap: 2rem;                     /* separación entre los boxes */
-  justify-items: center;
-  width: 100%;
-}
-
-/* ===== CONTACT BOX ===== */
-.contact-box {
-  background: #ffffff;
-  padding: 2.5vh 2vw;
-  border-radius: 1.5rem;
-  box-shadow: 0 1vh 3vh rgba(0,0,0,0.1);
-  border: 0.1rem solid #e9ecef;
-  text-align: center;
-  transition: all 0.3s ease;
-  width: 100%;
-  max-width: 20rem;
+  flex-direction: column;
+  justify-content: center;       /* NUEVO: centrar contenido verticalmente */
 }
 
 .contact-box:hover {
-  transform: translateY(-0.5rem);
-  box-shadow: 0 1.5vh 4vh rgba(0,0,0,0.15);
+  transform: translateY(-5px);   /* CAMBIADO: de -0.5rem a -5px */
+  box-shadow: 0 12px 30px rgba(0,0,0,0.15); /* CAMBIADO: de 1.5vh 4vh a 12px 30px */
   border-color: #3498db;
 }
 
 /* ===== TEXTOS ===== */
 .contact-title {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  font-size: 24px;               /* CAMBIADO: de clamp() a 24px */
   color: #2c3e50;
   font-weight: 600;
-  margin-bottom: 1vh;
+  margin-bottom: 15px;           /* CAMBIADO: de 1vh a 15px */
 }
 
 .contact-content {
-  font-size: clamp(1rem, 2vw, 1.3rem);
+  font-size: 18px;               /* CAMBIADO: de clamp() a 18px */
   font-weight: 500;
   color: #34495e;
-  margin-bottom: 0.5vh;
+  margin-bottom: 10px;           /* CAMBIADO: de 0.5vh a 10px */
+  word-break: break-word;        /* NUEVO: evita desbordamiento de texto */
 }
 
 .contact-link {
@@ -125,6 +60,13 @@
   color: inherit;
   display: block;
   transition: all 0.3s ease;
+  padding: 10px;                 /* NUEVO: mejor área de click */
+  border-radius: 8px;            /* NUEVO: bordes redondeados */
+  flex-grow: 1;                  /* NUEVO: para distribución uniforme */
+}
+
+.contact-link:hover {
+  background-color: #f8f9fa;     /* NUEVO: fondo al hacer hover */
 }
 
 .contact-link:hover .contact-content {
@@ -132,34 +74,74 @@
 }
 
 .contact-subtext {
-  font-size: clamp(0.7rem, 1.5vw, 0.9rem);
+  font-size: 14px;               /* CAMBIADO: de clamp() a 14px */
   color: #7f8c8d;
   font-style: italic;
-  margin-top: 0.5vh;
+  margin-top: 10px;              /* CAMBIADO: de 0.5vh a 10px */
 }
 
 /* MEJORAR el responsive actual: */
+@media (max-width: 1024px) {
+  .contact-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* CAMBIADO: para tablets */
+    gap: 20px;
+  }
+  
+  .contact-box {
+    max-width: 320px;
+    min-height: 180px;
+  }
+}
+
 @media (max-width: 768px) {
   .contact-section {
-    width: 90%;           /* ← USAR más ancho en móviles */
-    max-width: 90%;
-    padding: 3vh 5vw;
-    margin: 2vh auto;     /* ← REDUCIR margen en móviles */
-  }
-
-  .contact-box {
-    padding: 2vh 4vw;     /* ← AUMENTAR padding interno en móviles */
-    max-width: 100%;      /* ← PERMITIR que ocupe todo el ancho */
-    min-height: 120px;    /* ← ALTURA mínima para evitar cortes */
+    width: 95%;                  /* CAMBIADO: de 90% a 95% */
+    max-width: 95%;
+    padding: 20px 15px;          /* CAMBIADO: de 3vh 5vw a 20px 15px */
+    margin: 20px auto;           /* CAMBIADO: de 2vh auto a 20px auto */
   }
 
   .contact-wrapper {
-    gap: 1.5rem;          /* ← REDUCIR gap en móviles */
-    grid-template-columns: 1fr; /* ← UNA columna en móviles */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* MÚLTIPLES COLUMNAS */
+    gap: 15px;
+  }
+
+  .contact-box {
+    padding: 25px 20px;          /* CAMBIADO: de 2vh 4vw a 25px 20px */
+    max-width: 100%;
+    min-height: 160px;
+  }
+
+  .contact-title {
+    font-size: 22px;             /* NUEVO: tamaño específico para móvil */
   }
 
   .contact-content {
-    font-size: 1rem;      /* ← TAMAÑO fijo en móviles */
-    margin-bottom: 1vh;   /* ← MÁS espacio entre líneas */
+    font-size: 16px;             /* CAMBIADO: de 1rem a 16px */
+    margin-bottom: 8px;          /* NUEVO: espacio consistente */
+  }
+}
+
+/* NUEVO: Breakpoint para móviles pequeños - UNA SOLA COLUMNA */
+@media (max-width: 480px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;  /* UNA columna solo en móviles muy pequeños */
+  }
+  
+  .contact-section {
+    padding: 15px 10px;          /* NUEVO: padding más pequeño */
+  }
+
+  .contact-box {
+    padding: 20px 15px;          /* NUEVO: padding más pequeño */
+    min-height: 140px;
+  }
+
+  .contact-title {
+    font-size: 20px;             /* NUEVO: título más pequeño */
+  }
+
+  .contact-content {
+    font-size: 15px;             /* NUEVO: contenido más pequeño */
   }
 }

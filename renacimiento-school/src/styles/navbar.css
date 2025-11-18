@@ -86,29 +86,48 @@ nav li {
    MEDIA QUERIES
    =============================== */
 
-/* Móvil */
+/* Menú desplegable en móviles */
 @media (max-width: 768px) {
-  .navbar-custom {
-    height: 3.75rem;   /* 60px */
-    padding: 0 0.75rem;
+  .navbar-collapse {
+    background-color: #121780 !important;
+    border-top: 2px solid #E5BF00;
+    margin-top: 1rem;
+    padding: 1rem 0;
+    text-align: center;
   }
 
-  .cstm-logo {
-    height: 1.875rem;  /* 30px */
+  .navbar-nav {
+    width: 100%;
   }
 
-  nav li {
-    margin-right: 1rem; /* Reducir espacio horizontal */
+  .nav-item {
+    margin: 0 !important;
+    padding: 0;
   }
 
   .nav-link {
-    font-size: 1.125rem; /* 18px */
-    padding: 0.75rem 0;  /* Espacio vertical menor */
+    color: white !important;
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: 0.75rem 1rem !important;
+    margin: 0.25rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
   }
 
-  nav ul {
-    flex-direction: column; /* Menú vertical en móvil si quieres */
-    align-items: flex-start;
+  .nav-link:hover {
+    background-color: #E5BF00 !important;
+    color: #121780 !important;
+    border-radius: 5px;
+  }
+
+  .nav-link:last-child {
+    border-bottom: none;
+  }
+
+  /* Asegurar que el menú ocupe todo el ancho */
+  .container-fluid {
+    padding: 0 15px;
   }
 }
 

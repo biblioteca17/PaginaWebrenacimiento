@@ -1,12 +1,14 @@
 import "bootstrap/dist/css/bootstrap.min.css";
 import logo from "../assets/Logo/RenacimientoLogo.png";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
+import { Link } from 'react-scroll';
 
-const Navbar = ({ closeNavbar }) => {
+const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top custom-border">
       <div className="container-fluid">
         <a href="#inicio" className="navbar-brand d-flex align-items-center">
-          {/* <img src={logo} className="cstm-logo" alt="Fumiga logo" /> */}
+          <img src={logo} className="cstm-logo" alt="Renacimiento logo" />
         </a>
 
         <button
@@ -24,24 +26,43 @@ const Navbar = ({ closeNavbar }) => {
         <div className="collapse navbar-collapse justify-content-end" id="navbarS">
           <ul className="navbar-nav">
             <li className="nav-item mx-3">
-              <a href="#Banner" className="nav-link text-white" onClick={closeNavbar}>
+              <Link 
+                to="Banner" 
+                className="nav-link text-white" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarS"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 Inicio
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-3">
-              <a href="#Countdown" className="nav-link text-white" onClick={closeNavbar}>
+              <Link 
+                to="Edubox" 
+                className="nav-link text-white" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarS"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 Matriculate
-              </a>
+              </Link>
             </li>
             <li className="nav-item mx-3">
-              <a href="#Edubox" className="nav-link text-white" onClick={closeNavbar}>
-                Edubox
-              </a>
-            </li>
-            <li className="nav-item mx-3">
-              <a href="#Contact" className="nav-link text-white" onClick={closeNavbar}>
+              <Link 
+                to="Countdown" 
+                className="nav-link text-white" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#navbarS"
+                spy={true}
+                smooth={true}
+                duration={500}
+              >
                 Contáctanos
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
