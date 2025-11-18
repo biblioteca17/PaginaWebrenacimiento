@@ -5,7 +5,8 @@ const Edubox = () => {
       <section className="edubox-section">
         <h2 className="edubox-title">MATRÍCULA EN LÍNEA</h2>
         <p className="edubox-subtitle">EXCLUSIVO ALUMNOS DE EGRESO</p>
-        <a href="#" className="edubox-btn">
+        <a href="https://renacimiento.edubox.app" className="edubox-btn"target="_blank"
+          rel="noopener noreferrer">
           EDUBOX
         </a>
       </section>

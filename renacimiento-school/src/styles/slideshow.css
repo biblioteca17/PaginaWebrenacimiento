@@ -1,9 +1,9 @@
 /* Slideshow Section */
 .slideshow-section {
-  margin: 4vh 0; /* margen arriba/abajo compacto */
+  margin: 4vh auto; /* margen arriba/abajo compacto */
   padding: 0 2vw; /* separación lateral de los bordes */
   text-align: center;
-  width: 100%;
+  width: 70%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,14 +22,11 @@
 /* Contenedor de Slides */
 .slideshow-container {
   position: relative;
-  width: 100%;
-  max-width: 97%; /* ligeramente separado de los bordes */
+  width: 70%;
+  max-width: auto; /* ligeramente separado de los bordes */
   height: 40vh; /* altura proporcional al viewport */
   border-radius: 1rem;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  background: #f8f9fa;
-  border: 2px solid #e9ecef;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -53,7 +50,7 @@
   max-height: 100%;
   width: auto;
   height: auto;
-  object-fit: contain; /* ajusta dentro del contenedor sin cortar */
+  object-fit: cover; /* ajusta dentro del contenedor sin cortar */
   border-radius: 0.5rem;
 }
 
