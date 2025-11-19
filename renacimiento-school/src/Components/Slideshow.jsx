@@ -46,28 +46,51 @@ const Slideshow = () => {
     return () => clearInterval(slideInterval);
   }, []);
 
+  const goToPrevious = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  const goToNext = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
   return (
-    <div>
-      {/* Slideshow */}
-      <section className="slideshow-section">
-        <h2 className="slideshow-title">Galería de Nuestra Escuela</h2>
-        <div className="slideshow-container">
-          <div className="slide">
+    <div className="slideshow-wrapper">
+     {/* Slideshow a pantalla completa */}
+      <section className="fullscreen-slideshow">
+        <div className="slideshow-container-full">
+          <button className="nav-button-full prev" onClick={goToPrevious}>
+            &#8249;
+          </button>
+          
+          <div className="slide-full">
             <img
               src={slides[currentSlide]}
               alt={`Foto ${currentSlide + 1} de Renacimiento School`}
-              className="slide-image"
+              className="slide-image-full"
             />
+            <div className="slide-info-overlay">
+              <div className="slide-counter-full">
+                {(currentSlide + 1).toString().padStart(2, '0')} / {slides.length.toString().padStart(2, '0')}
+              </div>
+            </div>
           </div>
+          
+          <button className="nav-button-full next" onClick={goToNext}>
+            &#8250;
+          </button>
         </div>
-        <div className="slideshow-dots">
-          {slides.map((_, index) => (
-            <button
-              key={index}
-              className={`dot ${index === currentSlide ? "active" : ""}`}
-              onClick={() => setCurrentSlide(index)}
-            />
-          ))}
+        
+        <div className="slideshow-controls">
+          <div className="dots-container">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                className={`dot-full ${index === currentSlide ? "active" : ""}`}
+                onClick={() => setCurrentSlide(index)}
+              />
+            ))}
+          </div>
         </div>
       </section>
     </div>
