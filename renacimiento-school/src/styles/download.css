@@ -1,0 +1,37 @@
+.downloads-section {
+  width: 95%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  text-align: center;
+}
+
+.downloads-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 2rem;
+}
+
+.downloads-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.download-btn {
+  background-color: #121780; /* azul */
+  color: #ffffff;
+  padding: 1rem 2rem;
+  border-radius: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(18, 23, 128, 0.4);
+}
+
+.download-btn:hover {
+  background-color: #191fa1;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(18, 23, 128, 0.6);
+}
