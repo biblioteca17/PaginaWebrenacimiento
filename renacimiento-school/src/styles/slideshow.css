@@ -274,7 +274,7 @@
 
 @media (min-width: 1920px) {
   .fullscreen-slideshow {
-    height: 75vh;
+    height: 100vh;
     min-height: 600px;
     max-height: 800px;
     margin-bottom: 5px; 
